@@ -1,8 +1,9 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
-import HomePage from './pages/HomePage.jsx'
-import NoteDetailPage from './pages/NotedetailPage.jsx'
-import CreatePage from './pages/CreatePage.jsx'
+import HomePage from './pages/HomePage'
+import NoteDetailPage from './pages/NoteDetailPage'
+import CreatePage from './pages/createPage'
+
 
 
 
