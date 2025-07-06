@@ -1,0 +1,21 @@
+{
+  "name": "note-taking-app",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000T\u0000h\u0000i\u0000n\u0000k\u0000Y\u0000r\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeCenturian/Thinkyr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeCenturian/Thinkyr/issues"
+  },
+  "homepage": "https://github.com/CodeCenturian/Thinkyr#readme"
+}

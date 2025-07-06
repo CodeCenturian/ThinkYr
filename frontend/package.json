@@ -13,6 +13,7 @@
     "axios": "^1.10.0",
     "daisyui": "^4.12.24",
     "lucide-react": "^0.518.0",
+    "note-taking-app": "file:..",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hot-toast": "^2.5.2",

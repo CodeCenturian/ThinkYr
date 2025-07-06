@@ -1,12 +1,13 @@
 import express from 'express';
 import notesRoutes from './routes/notesRoutes.js';
 import { connectDB } from './config/db.js';
-
+import path from 'path';
 import dotenv from 'dotenv';
 import rateLimiter from './middleware/rateLimiter.js';
 dotenv.config(); // neccessary for ececuting .env
-const app = express();
 
+const app = express();
+const __dirname = path.resolve();
 import cors from 'cors' ;
 
 
@@ -38,6 +39,14 @@ app.use("/api/notes", notesRoutes); // this means if you get any request of the 
 
 
 const PORT = process.env.PORT || 5001;
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+    });
+}
 
 const executefirst = async() =>  {    try {
         await connectDB();
